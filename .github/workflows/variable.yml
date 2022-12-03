@@ -4,6 +4,7 @@ jobs:
   variable:
     runs-on: ubuntu-latest
     steps:
-      - run: node client.js
+      - name: Test Variable
+        run: node client.js
         env:
           ABC: abc
