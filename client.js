@@ -1,1 +1,1 @@
-console.log(ABC);
+console.log(ABC, 123);

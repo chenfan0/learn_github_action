@@ -9,6 +9,6 @@ jobs:
         with:
           node-version: '14'
       - name: Test Variable
-        run: node ./client.js
+        run: node client.js
         env:
           ABC: abc
