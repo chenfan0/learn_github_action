@@ -1,0 +1,9 @@
+name: variable
+on: [push]
+jobs:
+  variable:
+    runs-on: ubuntu-latest
+    steps:
+      - run: node client.js
+        env:
+          ABC: abc
