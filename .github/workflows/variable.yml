@@ -4,6 +4,10 @@ jobs:
   variable:
     runs-on: ubuntu-latest
     steps:
+      - name: setup Node
+        uses: actions/setup-node@2
+        with:
+          node-version: '14'
       - name: Test Variable
         run: node ./client.js
         env:
