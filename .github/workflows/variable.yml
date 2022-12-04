@@ -11,6 +11,7 @@ jobs:
           node-version: '14'
       - name: Test Variable
         run: node client.js
-        run: bash -x hello.sh
         env:
           ABC: abc
+      - name: run bash
+        run: bash -x hello.sh
