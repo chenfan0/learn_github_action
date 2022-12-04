@@ -13,6 +13,7 @@ jobs:
           path: output.log
   job2:
     runs-on: ubuntu-latest
+    needs: job1
     steps:
       - uses: actions/download-artifact@v3
         with:
