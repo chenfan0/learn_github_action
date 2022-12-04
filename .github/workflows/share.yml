@@ -1,0 +1,17 @@
+name: share
+on: ['push']
+jobs: 
+  job1:
+    steps:
+      - shell: bash
+        run: expr 1 + 1 > output.log
+      - name: upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+  job2:
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
