@@ -2,6 +2,7 @@ name: share
 on: ['push']
 jobs: 
   job1:
+    runs-on: ubuntu-latest
     steps:
       - shell: bash
         run: expr 1 + 1 > output.log
@@ -11,6 +12,7 @@ jobs:
           name: output-log-file
           path: output.log
   job2:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3
         with:
