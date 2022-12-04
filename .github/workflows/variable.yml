@@ -4,6 +4,7 @@ jobs:
   variable:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: setup Node
         uses: actions/setup-node@v2
         with:
